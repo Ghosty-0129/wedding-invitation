@@ -59,10 +59,12 @@
 
 <!-- ============ INVITATION ============ -->
 <section class="invite" id="invite">
+  <svg class="deco tl" viewBox="0 0 240 320" aria-hidden="true"></svg>
+  <svg class="deco br flip" viewBox="0 0 240 320" aria-hidden="true"></svg>
   <div class="wrap narrow">
     <div class="couple-stage reveal">
       <div class="couple-arc"></div>
-      <svg class="couple" viewBox="0 0 320 430" id="couple" aria-label="Illustration of the couple"></svg>
+      <div class="couple-frame"><img class="couple" src="assets/couple.jpg" alt="Illustration of Rumesha and Charith" width="554" height="554"></div>
     </div>
 
     <p class="kicker reveal" data-i18n="inv_title">You are invited</p>
@@ -85,6 +87,7 @@
 
 <!-- ============ DATE + COUNTDOWN ============ -->
 <section class="when" id="when">
+  <svg class="deco tr flip" viewBox="0 0 240 320" aria-hidden="true"></svg>
   <div class="wrap narrow">
     <div class="datebox reveal">
       <span class="dow" data-i18n="dow">Monday</span>
@@ -111,6 +114,7 @@
 
 <!-- ============ SCHEDULE ============ -->
 <section class="schedule" id="schedule">
+  <svg class="deco bl" viewBox="0 0 240 320" aria-hidden="true"></svg>
   <div class="wrap narrow">
     <h2 class="h2 reveal" data-i18n="sch_title">The Day</h2>
     <div class="timeline">
@@ -128,6 +132,8 @@
 
 <!-- ============ VENUE ============ -->
 <section class="venue" id="venue">
+  <svg class="deco tl" viewBox="0 0 240 320" aria-hidden="true"></svg>
+  <svg class="deco br flip" viewBox="0 0 240 320" aria-hidden="true"></svg>
   <div class="wrap narrow">
     <p class="kicker light reveal" data-i18n="at">At</p>
     <h2 class="h2 light reveal" data-i18n="venue">Hotel Green Court</h2>
@@ -140,6 +146,8 @@
 
 <!-- ============ RSVP ============ -->
 <section class="rsvp" id="rsvp">
+  <svg class="deco tl" viewBox="0 0 240 320" aria-hidden="true"></svg>
+  <svg class="deco br flip" viewBox="0 0 240 320" aria-hidden="true"></svg>
   <div class="wrap narrow">
     <h2 class="h2 reveal" data-i18n="rsvp_title">RSVP</h2>
     <p class="lead reveal" data-i18n="rsvp_lead">We would be delighted to celebrate with you. Kindly let us know if you can join us.</p>
@@ -168,11 +176,6 @@
           <label class="choice"><input type="radio" name="part" value="Reception only"><span data-i18n="f_part_r">Reception only</span></label>
         </div>
       </fieldset>
-
-      <label class="field">
-        <span data-i18n="f_diet">Dietary requirements <em>(optional)</em></span>
-        <input type="text" name="diet" maxlength="150">
-      </label>
 
       <label class="field">
         <span data-i18n="f_msg">A message for the couple <em>(optional)</em></span>
@@ -208,7 +211,13 @@
   <svg class="orn" id="footLotus" viewBox="0 0 240 150" aria-hidden="true"></svg>
   <p class="script foot-names"><span data-i18n="n_bride">Rumesha</span> <em data-i18n="amp">&amp;</em> <span data-i18n="n_groom">Charith</span></p>
   <p class="caps soft">07 . 12 . 2026</p>
+  <p class="credit">Music: “Gymnopédie No. 1” by Erik Satie, performed by Kevin MacLeod (incompetech.com), <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></p>
 </footer>
+
+<audio id="bgm" src="assets/music.mp3" loop preload="none"></audio>
+<button id="musicBtn" class="music" aria-label="Music on/off" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path class="note" d="M9 18V6l10-2v12"/><circle class="note" cx="6.5" cy="18" r="2.5"/><circle class="note" cx="16.5" cy="16" r="2.5"/><path class="slash" d="M3 3l18 18"/></svg>
+</button>
 
 </main>
 
