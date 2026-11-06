@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14302a">
+<title>Rumesha &amp; Charith · 07.12.2026</title>
+<meta property="og:title" content="Rumesha &amp; Charith — Wedding Invitation">
+<meta property="og:description" content="Monday 7th December 2026 · Hotel Green Court, Homagama">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Noto+Serif+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<!-- Language toggle -->
+<div class="lang" role="group" aria-label="Language">
+  <button data-lang="en" class="active">EN</button>
+  <button data-lang="si">සිං</button>
+</div>
+
+<!-- ============ GATE (tap to open) ============ -->
+<div id="gate">
+  <div class="gate-half l"></div>
+  <div class="gate-half r"></div>
+  <div class="gate-center">
+    <p class="gate-for" data-i18n="gate_for">With love, for</p>
+    <h2 class="gate-name script" id="gateName">Our Dear Guest</h2>
+    <button id="openBtn" class="seal" aria-label="Open invitation">
+      <span class="seal-ring"></span>
+      <span class="seal-txt">R<i>&amp;</i>C</span>
+    </button>
+    <p class="gate-tap" data-i18n="gate_tap">Tap the seal to open</p>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="arch">
+    <svg class="lotus" id="heroLotus" viewBox="0 0 240 320" aria-hidden="true"></svg>
+    <div class="arch-content">
+      <p class="eyebrow" data-i18n="tagline">Together with their families</p>
+      <h1 class="names">
+        <span class="script n1" data-i18n="n_bride">Rumesha</span>
+        <span class="and" data-i18n="and">and</span>
+        <span class="script n2" data-i18n="n_groom">Charith</span>
+      </h1>
+      <p class="hero-date">07 <b>·</b> 12 <b>·</b> 2026</p>
+    </div>
+  </div>
+  <a href="#invite" class="scroll-cue" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- ============ INVITATION ============ -->
+<section class="invite" id="invite">
+  <div class="wrap narrow">
+    <div class="couple-stage reveal">
+      <div class="couple-arc"></div>
+      <svg class="couple" viewBox="0 0 320 430" id="couple" aria-label="Illustration of the couple"></svg>
+    </div>
+
+    <p class="kicker reveal" data-i18n="inv_title">You are invited</p>
+
+    <div class="card reveal">
+      <p class="caps strong" data-i18n="parents1">Mr. &amp; Mrs. Raveendra Kumarasekara</p>
+      <p class="caps soft" data-i18n="together">Together with</p>
+      <p class="caps strong" data-i18n="parents2">Mr. &amp; Mrs. Shantha Fernando</p>
+      <p class="caps soft" data-i18n="request">Request the honour of the presence of</p>
+
+      <div class="guestline">
+        <span class="guest-name script" id="guestName"></span>
+      </div>
+
+      <p class="caps soft" data-i18n="marriage">At the marriage of their beloved children</p>
+      <p class="couple-names script"><span data-i18n="n_bride">Rumesha</span> <em data-i18n="amp">&amp;</em> <span data-i18n="n_groom">Charith</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATE + COUNTDOWN ============ -->
+<section class="when" id="when">
+  <div class="wrap narrow">
+    <div class="datebox reveal">
+      <span class="dow" data-i18n="dow">Monday</span>
+      <span class="day">07<sup>th</sup></span>
+      <span class="mon" data-i18n="month">December</span>
+      <span class="yr">2026</span>
+    </div>
+    <p class="from reveal" data-i18n="from">From 9.30 am onwards</p>
+
+    <div class="countdown reveal" id="countdown" aria-live="off">
+      <div><b id="cd-d">--</b><small data-i18n="cd_d">Days</small></div>
+      <div><b id="cd-h">--</b><small data-i18n="cd_h">Hours</small></div>
+      <div><b id="cd-m">--</b><small data-i18n="cd_m">Minutes</small></div>
+      <div><b id="cd-s">--</b><small data-i18n="cd_s">Seconds</small></div>
+    </div>
+    <p class="cd-done" id="cdDone" hidden data-i18n="cd_done">Today is the day!</p>
+
+    <div class="btnrow reveal">
+      <button class="btn ghost" id="calGoogle" data-i18n="cal_google">Add to Google Calendar</button>
+      <button class="btn ghost" id="calIcs" data-i18n="cal_ics">Apple / Outlook (.ics)</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SCHEDULE ============ -->
+<section class="schedule" id="schedule">
+  <div class="wrap narrow">
+    <h2 class="h2 reveal" data-i18n="sch_title">The Day</h2>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <time>9.30 <small>AM</small></time>
+        <div><h3 data-i18n="sch1_t">Guests arrive</h3><p data-i18n="sch1_d">Welcome &amp; warm greetings</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <time>10.00 <small>AM</small></time>
+        <div><h3 data-i18n="sch2_t">Poruwa Ceremony</h3><p data-i18n="sch2_d">The traditional wedding ceremony</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VENUE ============ -->
+<section class="venue" id="venue">
+  <div class="wrap narrow">
+    <p class="kicker light reveal" data-i18n="at">At</p>
+    <h2 class="h2 light reveal" data-i18n="venue">Hotel Green Court</h2>
+    <p class="venue-sub reveal" data-i18n="venue_sub">Homagama</p>
+    <div class="btnrow reveal">
+      <a class="btn gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hotel+Green+Court+Homagama" data-i18n="map">Open in Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RSVP ============ -->
+<section class="rsvp" id="rsvp">
+  <div class="wrap narrow">
+    <h2 class="h2 reveal" data-i18n="rsvp_title">RSVP</h2>
+    <p class="lead reveal" data-i18n="rsvp_lead">We would be delighted to celebrate with you. Kindly let us know if you can join us.</p>
+
+    <form id="rsvpForm" class="form reveal" novalidate>
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label class="field">
+        <span data-i18n="f_name">Your name</span>
+        <input type="text" name="name" id="fName" required maxlength="80" autocomplete="name">
+      </label>
+
+      <fieldset class="field">
+        <legend data-i18n="f_att">Will you attend?</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="attending" value="Yes" required><span data-i18n="f_yes">Joyfully accept</span></label>
+          <label class="choice"><input type="radio" name="attending" value="No"><span data-i18n="f_no">Regretfully decline</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field" id="partWrap" hidden>
+        <legend data-i18n="f_part">Which would you attend?</legend>
+        <div class="choices col">
+          <label class="choice"><input type="radio" name="part" value="Poruwa ceremony & reception" checked><span data-i18n="f_part_both">Poruwa ceremony &amp; reception</span></label>
+          <label class="choice"><input type="radio" name="part" value="Poruwa ceremony only"><span data-i18n="f_part_p">Poruwa ceremony only</span></label>
+          <label class="choice"><input type="radio" name="part" value="Reception only"><span data-i18n="f_part_r">Reception only</span></label>
+        </div>
+      </fieldset>
+
+      <label class="field">
+        <span data-i18n="f_diet">Dietary requirements <em>(optional)</em></span>
+        <input type="text" name="diet" maxlength="150">
+      </label>
+
+      <label class="field">
+        <span data-i18n="f_msg">A message for the couple <em>(optional)</em></span>
+        <textarea name="message" rows="3" maxlength="500"></textarea>
+      </label>
+
+      <p class="form-err" id="formErr" role="alert" hidden></p>
+      <button type="submit" class="btn gold big" id="sendBtn"><span data-i18n="f_send">Send RSVP</span></button>
+    </form>
+
+    <div class="thanks" id="thanks" hidden>
+      <svg viewBox="0 0 64 64" class="tick" aria-hidden="true"><circle cx="32" cy="32" r="29" pathLength="1"/><path d="M19 33l9 9 17-19" pathLength="1"/></svg>
+      <h3 class="script" data-i18n="thanks_t">Thank you!</h3>
+      <p id="thanksMsg"></p>
+      <button class="link" id="editRsvp" data-i18n="f_edit">Send another reply</button>
+    </div>
+
+    <div class="contacts reveal">
+      <p class="caps soft" data-i18n="contact">For any queries, please contact</p>
+      <div class="person">
+        <strong>Manuja Thathsara</strong>
+        <span><a href="tel:+94766631436">076 663 1436</a><a class="wa" target="_blank" rel="noopener" href="https://wa.me/94766631436">WhatsApp</a></span>
+      </div>
+      <div class="person">
+        <strong>Ravi Kumarasekara</strong>
+        <span><a href="tel:+94716140793">071 614 0793</a><a class="wa" target="_blank" rel="noopener" href="https://wa.me/94716140793">WhatsApp</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <svg class="orn" id="footLotus" viewBox="0 0 240 150" aria-hidden="true"></svg>
+  <p class="script foot-names"><span data-i18n="n_bride">Rumesha</span> <em data-i18n="amp">&amp;</em> <span data-i18n="n_groom">Charith</span></p>
+  <p class="caps soft">07 . 12 . 2026</p>
+</footer>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

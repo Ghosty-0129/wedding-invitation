@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Invitation link maker</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;background:#fbf7ee;color:#241f1c;max-width:720px;margin:0 auto;padding:24px}
+h1{font-size:22px;color:#14302a}label{display:block;margin:16px 0 6px;font-weight:600}
+input,textarea{width:100%;padding:10px;font:inherit;border:1px solid #d9cdb6;border-radius:8px}
+button,a.b{display:inline-block;background:#14302a;color:#f3dc8e;border:0;border-radius:8px;padding:9px 14px;font:inherit;cursor:pointer;text-decoration:none;margin:2px}
+a.b.wa{background:#1f8a4c;color:#fff}
+.row{border-bottom:1px solid #e5dcc8;padding:10px 0}.row b{display:block}.row small{word-break:break-all;color:#6d625a;display:block;margin:2px 0 6px}
+</style></head><body>
+<h1>Invitation link maker</h1>
+<p>Type one guest (or family) per line, e.g. <i>Perera Family</i> or <i>Kamal &amp; Nimali</i>. Each gets its own personalised link.</p>
+<label for="base">Your website address</label>
+<input id="base" placeholder="https://your-name.github.io/wedding/">
+<label for="names">Guest names (one per line)</label>
+<textarea id="names" rows="8" placeholder="Perera Family&#10;Kamal &amp; Nimali&#10;Aunty Kumari"></textarea>
+<p><button id="go">Make links</button> <button id="copyAll">Copy all</button></p>
+<div id="out"></div>
+<script>
+var base=document.getElementById('base'),names=document.getElementById('names'),out=document.getElementById('out');
+base.value=location.href.replace(/links\.html.*$/,'');
+function link(n){var b=base.value.trim();if(b&&!/[\/]$/.test(b))b+='/';return b+'?to='+encodeURIComponent(n)}
+document.getElementById('go').onclick=function(){
+  out.innerHTML='';
+  names.value.split('\n').map(function(s){return s.trim()}).filter(Boolean).forEach(function(n){
+    var u=link(n),d=document.createElement('div');d.className='row';
+    var b=document.createElement('b');b.textContent=n;
+    var s=document.createElement('small');s.textContent=u;
+    var c=document.createElement('button');c.textContent='Copy';c.onclick=function(){navigator.clipboard.writeText(u);c.textContent='Copied ✓'};
+    var w=document.createElement('a');w.className='b wa';w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
+    w.href='https://wa.me/?text='+encodeURIComponent('You are warmly invited to the wedding of Rumesha & Charith 💛\n'+u);
+    d.append(b,s,c,w);out.appendChild(d);
+  });
+};
+document.getElementById('copyAll').onclick=function(){
+  var t=names.value.split('\n').map(function(s){return s.trim()}).filter(Boolean).map(function(n){return n+'\t'+link(n)}).join('\n');
+  navigator.clipboard.writeText(t);this.textContent='Copied ✓';
+};
+</script></body></html>
