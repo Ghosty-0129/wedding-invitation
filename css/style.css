@@ -181,6 +181,8 @@ section>.wrap{position:relative;z-index:1}
 .venue{background:radial-gradient(ellipse at 50% 0,var(--green2),var(--green) 70%);color:#f3ead8;overflow:hidden}
 .venue::before{content:"";position:absolute;inset:0;opacity:.06;background-image:radial-gradient(#e8c76d 1px,transparent 1.5px);background-size:22px 22px}
 .venue .wrap{position:relative}
+.venue-hall{font-family:var(--caps);letter-spacing:.3em;text-transform:uppercase;font-size:clamp(15px,4.4vw,19px);color:var(--gold2);margin:-4px 0 12px}
+[lang=si] .venue-hall{text-transform:none;letter-spacing:.05em}
 .venue-sub{font-family:var(--caps);letter-spacing:.4em;text-transform:uppercase;font-size:15px;margin-bottom:30px;color:#e8d9b2}
 [lang=si] .venue-sub{text-transform:none;letter-spacing:.05em}
 

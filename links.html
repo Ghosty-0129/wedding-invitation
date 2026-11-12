@@ -20,6 +20,11 @@ a.b.wa{background:#1f8a4c;color:#fff}
 <p><button id="go">Make links</button> <button id="copyAll">Copy all</button></p>
 <div id="out"></div>
 <script>
+var MSG=[
+"❤️ A beautiful journey, a lifetime of love, and a special day we'd love to share with you!",
+"With immense joy, we warmly invite you to celebrate the wedding of Rumesha & Charith. 💍",
+"Your presence and blessings would make our special day even more memorable.",
+"We can't wait to celebrate this beautiful moment with you! ✨"].join('\n');
 var base=document.getElementById('base'),names=document.getElementById('names'),out=document.getElementById('out');
 base.value=location.href.replace(/links\.html.*$/,'');
 function link(n){var b=base.value.trim();if(b&&!/[\/]$/.test(b))b+='/';return b+'?to='+encodeURIComponent(n)}
@@ -31,7 +36,7 @@ document.getElementById('go').onclick=function(){
     var s=document.createElement('small');s.textContent=u;
     var c=document.createElement('button');c.textContent='Copy';c.onclick=function(){navigator.clipboard.writeText(u);c.textContent='Copied ✓'};
     var w=document.createElement('a');w.className='b wa';w.target='_blank';w.rel='noopener';w.textContent='WhatsApp';
-    w.href='https://wa.me/?text='+encodeURIComponent('You are warmly invited to the wedding of Rumesha & Charith 💛\n'+u);
+    w.href='https://wa.me/?text='+encodeURIComponent(MSG+'\n\n'+u);
     d.append(b,s,c,w);out.appendChild(d);
   });
 };

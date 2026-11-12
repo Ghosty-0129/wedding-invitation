@@ -10,5 +10,5 @@ window.WEDDING_CONFIG = {
   EVENT_START: "2026-12-07T09:30:00+05:30",
   EVENT_END:   "2026-12-07T14:00:00+05:30",
   EVENT_TITLE: "Rumesha & Charith's Wedding",
-  EVENT_PLACE: "Hotel Green Court, Homagama, Sri Lanka"
+  EVENT_PLACE: "Emperor's Court, Hotel Green Court, Homagama, Sri Lanka"
 };
