@@ -198,9 +198,9 @@ section>.wrap{position:relative;z-index:1}
 .field input[type=text]:focus,.field textarea:focus{outline:0;border-color:var(--gold3);box-shadow:0 0 0 4px rgba(201,153,58,.2)}
 .choices{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .choices.col{grid-template-columns:1fr}
-.choice{position:relative;cursor:pointer}
+.choice{position:relative;cursor:pointer;display:flex}
 .choice input{position:absolute;opacity:0;inset:0}
-.choice span{display:block;text-align:center;padding:14px 10px;border:1px solid #d9cdb6;border-radius:10px;background:var(--ivory);transition:.3s var(--ease);font-size:17px}
+.choice span{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.25;min-height:60px;padding:14px 10px;border:1px solid #d9cdb6;border-radius:10px;background:var(--ivory);transition:.3s var(--ease);font-size:17px}
 .choice input:checked+span{background:var(--green);border-color:var(--green);color:#f3dc8e;transform:scale(1.02);box-shadow:0 8px 18px -10px rgba(20,48,42,.8)}
 .choice input:focus-visible+span{outline:2px solid var(--gold3);outline-offset:2px}
 .hp{position:absolute!important;left:-9999px;opacity:0;height:0;width:0}
