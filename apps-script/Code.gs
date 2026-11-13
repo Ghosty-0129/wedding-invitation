@@ -3,7 +3,7 @@
  * Every RSVP becomes one row in a tab called "RSVP".
  */
 var SHEET_NAME = 'RSVP';
-var HEADERS = ['Received', 'Invite link name', 'Name', 'Attending', 'Which part', 'Message', 'Language'];
+var HEADERS = ['Received', 'Invite link name', 'Name', 'Attending', 'Message', 'Language'];
 
 function clean_(v, max) {
   v = String(v == null ? '' : v).slice(0, max || 200);
@@ -26,7 +26,7 @@ function doPost(e) {
     sh.appendRow([
       new Date(),
       clean_(d.link, 80), clean_(d.name, 80), clean_(d.attending, 5),
-      clean_(d.part, 60), clean_(d.message, 500), clean_(d.lang, 3)
+      clean_(d.message, 500), clean_(d.lang, 3)
     ]);
     return ContentService.createTextOutput(JSON.stringify({ ok: true })).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {

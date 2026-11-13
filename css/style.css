@@ -205,7 +205,6 @@ section>.wrap{position:relative;z-index:1}
 .choice input:focus-visible+span{outline:2px solid var(--gold3);outline-offset:2px}
 .hp{position:absolute!important;left:-9999px;opacity:0;height:0;width:0}
 .form-err{color:#a12727;font-size:16px;margin-bottom:12px}
-#partWrap{animation:drop .5s var(--ease)}
 @keyframes drop{from{opacity:0;transform:translateY(-10px)}}
 .thanks{background:#fffdf8;border:1px solid rgba(201,153,58,.45);padding:40px 24px;box-shadow:0 20px 50px -28px rgba(60,40,10,.4);animation:drop .8s var(--ease)}
 .thanks h3{font-size:54px;margin:6px 0}

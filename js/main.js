@@ -25,8 +25,6 @@
       at: 'At', venue: 'Hotel Green Court', hall: 'Emperor’s Court', venue_sub: 'Homagama', map: 'Open in Maps',
       rsvp_title: 'RSVP', rsvp_lead: 'Your presence would make our celebration even more special. Kindly let us know whether you will be joining us.',
       f_name: 'Your name', f_att: 'Will you attend?', f_yes: 'Joyfully accept', f_no: 'Regretfully decline',
-      f_part: 'Which would you attend?', f_part_both: 'Poruwa ceremony & reception',
-      f_part_p: 'Poruwa ceremony only', f_part_r: 'Reception only',
       f_msg: 'A little note for the couple <em>(optional)</em>',
       f_send: 'Send RSVP', f_sending: 'Sending…', f_edit: 'Send another reply',
       thanks_t: 'Thank you!', thanks_yes: 'We can’t wait to celebrate with you, {n}!',
@@ -50,8 +48,6 @@
       at: 'ස්ථානය', venue: 'හෝටල් ග්‍රීන් කෝට්', hall: 'එම්පරර්ස් කෝට්', venue_sub: 'හෝමාගම', map: 'සිතියමේ විවෘත කරන්න',
       rsvp_title: 'ඔබගේ පිළිතුර', rsvp_lead: 'ඔබගේ පැමිණීම අපගේ මංගල්‍යය තවත් විශේෂ කරනු ඇත. ඔබ අප සමඟ එක්වන්නේද යන්න කරුණාකර දන්වන්න.',
       f_name: 'ඔබගේ නම', f_att: 'ඔබ පැමිණෙනවාද?', f_yes: 'සතුටින් පැමිණෙමි', f_no: 'කනගාටුවෙන් පැමිණිය නොහැක',
-      f_part: 'ඔබ සහභාගි වන්නේ කුමකටද?', f_part_both: 'පෝරුව චාරිත්‍රය සහ මංගල සංග්‍රහය',
-      f_part_p: 'පෝරුව චාරිත්‍රයට පමණි', f_part_r: 'මංගල සංග්‍රහයට පමණි',
       f_msg: 'මනාලයාට සහ මනාලියට කුඩා සටහනක් <em>(අවශ්‍ය නම්)</em>',
       f_send: 'පිළිතුර යවන්න', f_sending: 'යවමින්…', f_edit: 'නැවත පිළිතුරක් යවන්න',
       thanks_t: 'ස්තූතියි!', thanks_yes: '{n}, ඔබ සමඟ සැමරීමට අපි බලා සිටිමු!',
@@ -237,10 +233,6 @@
   var KEY = 'wd_rsvp_' + (rawGuest || 'generic');
   if (guest) $('#fName').value = guest;
 
-  $$('input[name=attending]').forEach(function (r) {
-    r.addEventListener('change', function () { $('#partWrap').hidden = form.attending.value !== 'Yes'; });
-  });
-
   function showThanks(name, attending, demo) {
     var msg = T[lang][attending === 'Yes' ? 'thanks_yes' : 'thanks_no'].replace('{n}', name);
     $('#thanksMsg').textContent = msg + (demo ? '  (Demo mode – not saved yet)' : '');
@@ -265,7 +257,6 @@
 
     var payload = {
       link: rawGuest, name: name, attending: att,
-      part: att === 'Yes' ? form.part.value : '',
       message: form.message.value.trim(), lang: lang
     };
     sendBtn.disabled = true;
